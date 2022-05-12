@@ -17,16 +17,21 @@ export interface MyLabelProps {
     * Basic colors of the boton
   */
   color?: 'primary'|'secondary'|'tertiary';
+  /**
+   * Set of Background-Color
+   */
+   colorFuente?: string; 
 }
 
 export const MyLabel = ({     
     allCaps = false,
     color   = 'primary',
     label   = "Sin valor",  
-    size    = "normal"
+    size    = "normal", 
+    colorFuente, 
 }: MyLabelProps) => {
         return(
-            <span className={`${size} text-${ color } `}>
+            <span className={`label ${size} text-${ color } `} style={{ color:colorFuente }}>
                     { allCaps ? label.toUpperCase() : label }
             </span>
         )};

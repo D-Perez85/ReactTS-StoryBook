@@ -7,6 +7,7 @@ export default {
     argTypes: {
         size: { control: 'select' },
         color: { control: 'select' },
+        colorFuente:{control: 'color'},
     }
 } as ComponentMeta<typeof MyLabel>
  
@@ -15,10 +16,11 @@ const Template: ComponentStory<typeof MyLabel> =(args) => <MyLabel {...args}/>
 export const Basic = Template.bind({});
 //Config por default en Basic storie
 Basic.args = {
-    size: 'normal', 
+    size: 'h1', 
     label: 'Texto de Prueba',
     allCaps: false,
-    color: 'primary'
+    color: 'primary',
+    // colorFuente: '#ece415'
 }
 export const AllCaps = Template.bind({});
 AllCaps.args = {
@@ -39,7 +41,12 @@ Tertiary.args = {
 }
 
 
-
+export const CustomFontColor = Template.bind({});
+CustomFontColor.args = {
+    size: 'h1',
+    label: 'Color Font',
+    colorFuente: '#ece415'
+}
 
 
 
