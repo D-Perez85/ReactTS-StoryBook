@@ -6,7 +6,7 @@
 
 	
 >#### APLICACION
-	- Util en grupos de desarrollo para poder compartir componentes, su estructura, funcioanlidad, etc.
+	- Util en grupos de desarrollo para poder compartir componentes, su estructura, funcionalidad, etc.
 
 ## Comenzando 🚀
 
