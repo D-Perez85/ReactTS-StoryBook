@@ -48,6 +48,15 @@ CustomFontColor.args = {
     colorFuente: '#ece415'
 }
 
+export const CustomFontBG = Template.bind({});
+CustomFontBG.args = {
+    label: 'Bg-Color',
+    size: 'h1',
+    colorFuente: 'white',
+    backgroundColor: 'black'
+}
+
+
 
 
 
