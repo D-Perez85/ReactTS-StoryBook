@@ -1,9 +1,14 @@
-import './mylabel.css';
+import "./mylabel.css";
 
-export const MyLabel = () => {
-    return (
-        <span> Hola Mundo  </span>
-    )
+export interface MyLabelProps {
+  label: string; // Este es el mensaje a mostrar en la etiqueta
+  size: "normal" | "h1" | "h2" | "h3"; // Tamaño de la etiquete
 }
-export default MyLabel;
 
+export const MyLabel = ({ label = "Sin valor",  size = "normal"}: MyLabelProps) => {
+        return(
+            <span className={`${size}`}>
+                    {label}
+            </span>
+        )};
+export default MyLabel;
