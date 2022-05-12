@@ -1,8 +1,14 @@
 import "./mylabel.css";
 
 export interface MyLabelProps {
-  label: string; // Este es el mensaje a mostrar en la etiqueta
-  size: "normal" | "h1" | "h2" | "h3"; // Tamaño de la etiquete
+    /**
+     * This is the message of the Label
+     */
+  label: string;
+  /**
+   * This is the size of the label
+   */
+  size: "normal" | "h1" | "h2" | "h3";
 }
 
 export const MyLabel = ({ label = "Sin valor",  size = "normal"}: MyLabelProps) => {
