@@ -1,7 +1,23 @@
 {
-  "name": "react-app",
+  "name": "storybook-my-components",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "license": "MIT",
+  "typings": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "repository": {
+  "url": "https://github.com/D-Perez85/ReactTS-StoryBook",
+  "type": "git"
+  },
+  "release": {
+    "branches":[
+      "main"
+    ]
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
   "dependencies": {
     "@storybook/addon-postcss": "^2.0.0",
     "@testing-library/jest-dom": "^5.16.4",
@@ -19,7 +35,7 @@
   },
   "scripts": {
     "start": "start-storybook -p 6006",
-    "build": "build-storybook",
+    "build": "falta implementar!!",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "chromatic": "npx chromatic --project-token=a51ce70002a9"
