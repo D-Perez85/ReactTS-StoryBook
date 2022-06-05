@@ -1,23 +1,16 @@
-import React from 'react';
-
 import { Header } from './Header';
 import './page.css';
 
-type User = {
-  name: string;
-};
+export interface PageProps {
+  user?: {};
+  onLogin: () => void;
+  onLogout: () => void;
+  onCreateAccount: () => void;
+}
 
-export const Page: React.VFC = () => {
-  const [user, setUser] = React.useState<User>();
-
-  return (
+export const Page = ({ user, onLogin, onLogout, onCreateAccount }: PageProps) => (
     <article>
-      <Header
-        user={user}
-        onLogin={() => setUser({ name: 'Jane Doe' })}
-        onLogout={() => setUser(undefined)}
-        onCreateAccount={() => setUser({ name: 'Jane Doe' })}
-      />
+    <Header user={user} onLogin={onLogin} onLogout={onLogout} onCreateAccount={onCreateAccount} />
 
       <section>
         <h2>Pages in Storybook</h2>
@@ -70,4 +63,5 @@ export const Page: React.VFC = () => {
       </section>
     </article>
   );
-};
+  
+
